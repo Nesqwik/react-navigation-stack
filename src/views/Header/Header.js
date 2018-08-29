@@ -7,7 +7,6 @@ import {
   StyleSheet,
   View,
   I18nManager,
-  MaskedViewIOS,
 } from 'react-native';
 
 import { SafeAreaView, withOrientation } from 'react-navigation';
@@ -19,6 +18,8 @@ import HeaderStyleInterpolator from './HeaderStyleInterpolator';
 
 const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : 0;
+const MaskedViewIOS = Platform.OS === 'ios' ? require('react-native').MaskedViewIOS : undefined;
+
 
 // These can be adjusted by using headerTitleContainerStyle on navigationOptions
 const TITLE_OFFSET_CENTER_ALIGN = Platform.OS === 'ios' ? 70 : 56;
